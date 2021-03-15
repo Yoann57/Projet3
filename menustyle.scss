@@ -92,6 +92,45 @@ header i {
   margin-left: 10px;
   margin-right: 10px;
 }
+#txtentre{
+  animation: fadein 3s;
+  -moz-animation: fadein 3s;
+  -webkit-animation: fadein 3s;
+}
+#txtplat{
+  animation: fadein 5s;
+  -moz-animation: fadein 5s;
+  -webkit-animation: fadein 5s;
+}
+#txtdessert{
+  animation: fadein 7s;
+  -moz-animation: fadein 7s;
+  -webkit-animation: fadein 7s;
+}
+@keyframes fadein {
+  from {
+    opacity:0;
+  }
+  to{
+    opacity:1;
+  }
+}
+@-moz-keyframes fadein{
+  from {
+    opacity:0;
+  }
+  to{
+    opacity:1;
+  }
+}
+@-webkit-keyframes fadein{
+  from {
+    opacity:0;
+  }
+  to{
+    opacity:1;
+  }
+}
 .txt p {
   margin: 0;
   padding: 5px 15px 5px 15px;
