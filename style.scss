@@ -60,7 +60,6 @@ h1 {
 #middle {
   font-family: "roboto-bold";
   font-size: 1, 8em;
-  
 }
 .btnmid {
   display: flex;
@@ -77,7 +76,6 @@ h1 {
   width: 45px;
   margin: 10px;
   color: gray;
-
 }
 .num {
   height: 30px;
@@ -101,8 +99,14 @@ h1 {
   max-width: 400px;
   box-shadow: 1px 1px 5px rgb(214, 213, 213);
   margin-left: auto;
-    margin-right: auto ;
+  margin-right: auto;
   justify-content: center;
+}
+.menucartes a {
+  text-decoration: none;
+}
+.menucartes p {
+  color: black;
 }
 
 .menu1,
@@ -132,6 +136,7 @@ h1 {
 .fa-heart::before {
   content: "\f004";
   transition: color 1s ease-out;
+  color: #552292;
 }
 .fa-heart:hover::before {
   color: $primaire;

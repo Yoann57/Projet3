@@ -26,6 +26,7 @@ header {
 
 header i {
   margin: 20px 50px 0 20px;
+  color: black;
 }
 
 #logo img {
@@ -244,7 +245,10 @@ footer i {
 }
 
 @media screen and (min-width: 499px) {
-  header, .menu1, #menutxt, .btnresto {
+  header,
+  .menu1,
+  #menutxt,
+  .btnresto {
     margin-left: auto;
     margin-right: auto;
     -webkit-box-pack: center;
