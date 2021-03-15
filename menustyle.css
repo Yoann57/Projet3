@@ -1,0 +1,255 @@
+@font-face {
+  font-family: "roboto";
+  src: url("polices/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: "shrikhand";
+  src: url("polices/Shrikhand-Regular.ttf");
+}
+
+@font-face {
+  font-family: "roboto-bold";
+  src: url("polices/Roboto-Bold.ttf");
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+header i {
+  margin: 20px 50px 0 20px;
+}
+
+#logo img {
+  height: 30px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.menu1 {
+  background-image: url(images/menu1.jpg);
+}
+
+.menu1 {
+  height: 300px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  max-width: 500px;
+}
+
+.titre {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#menutxt {
+  border: 1px solid transparent;
+  background-color: #f3f3f3;
+  border-radius: 47px 47px 0 0;
+  margin-top: -48px;
+  max-width: 500px;
+}
+
+.titre p {
+  margin-left: 25px;
+  font-family: "shrikhand";
+  font-size: 30px;
+}
+
+.fa-heart {
+  margin: 36px 0 0 20px;
+}
+
+.fa-heart::before {
+  content: "\f004";
+  -webkit-transition: color 1s ease-out;
+  transition: color 1s ease-out;
+  color: #552292;
+}
+
+.fa-heart:hover::before {
+  color: #9356dc;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#titresepare {
+  margin-left: 20px;
+  border-bottom: 3px solid #99e2d0;
+  width: 40px;
+  margin-bottom: 10px;
+}
+
+#titresepare p {
+  margin-bottom: 5px;
+}
+
+.txt {
+  border: 1px solid transparent;
+  background-color: white;
+  border-radius: 17px;
+  margin-bottom: 12px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.txt p {
+  margin: 0;
+  padding: 5px 15px 5px 15px;
+}
+
+.anim {
+  display: none;
+  border: 1px solid transparent;
+  border-radius: 0 17px 17px 0;
+  padding-top: 20px;
+  margin-top: -30px;
+  margin-bottom: -1px;
+  margin-right: -1px;
+  padding-left: 30px;
+  background-color: #99e2d0;
+}
+
+.txt:hover .anim {
+  display: block;
+  -webkit-animation-name: anim;
+          animation-name: anim;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+@-webkit-keyframes anim {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 55px;
+  }
+}
+
+@keyframes anim {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 55px;
+  }
+}
+
+.txt:hover .animi {
+  display: block;
+  -webkit-animation-name: animi;
+          animation-name: animi;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+@-webkit-keyframes animi {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes animi {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.animi {
+  border: 1px solid transparent;
+  border-radius: 55%;
+  padding: 2px 0 0 3px;
+  color: #99e2d0;
+  margin-right: 30px;
+  height: 20px;
+  width: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+.txt2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.btnresto {
+  border: 1px solid transparent;
+  border-radius: 65px;
+  text-align: center;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  background: linear-gradient(170deg, #ff79da 30%, #9356dc 70%);
+  max-width: 300px;
+}
+
+.btnresto p {
+  color: white;
+}
+
+.logof {
+  height: 17px;
+  margin-left: 30px;
+  margin-bottom: 10px;
+  padding: 10px;
+  color: white;
+  font-family: shrikhand;
+}
+
+footer ul {
+  list-style-type: none;
+  line-height: 175%;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+  padding-bottom: 5px;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #f2f2f2;
+  font-size: 15px;
+  background-color: #313131;
+}
+
+footer i {
+  width: 10px;
+  padding-right: 15px;
+}
+
+@media screen and (min-width: 499px) {
+  header, .menu1, #menutxt, .btnresto {
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+/*# sourceMappingURL=menustyle.css.map */

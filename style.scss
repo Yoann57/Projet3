@@ -60,6 +60,7 @@ h1 {
 #middle {
   font-family: "roboto-bold";
   font-size: 1, 8em;
+  
 }
 .btnmid {
   display: flex;
@@ -76,6 +77,7 @@ h1 {
   width: 45px;
   margin: 10px;
   color: gray;
+
 }
 .num {
   height: 30px;
@@ -98,7 +100,11 @@ h1 {
   margin: 30px;
   max-width: 400px;
   box-shadow: 1px 1px 5px rgb(214, 213, 213);
+  margin-left: auto;
+    margin-right: auto ;
+  justify-content: center;
 }
+
 .menu1,
 .menu2,
 .menu3,
@@ -112,8 +118,6 @@ h1 {
 #restaurants {
   border: 1px solid transparent;
   background-color: rgb(243, 243, 243);
-  justify-content: center;
-  width: 100%;
 }
 .carte p {
   padding: 0 0 0 10px;
