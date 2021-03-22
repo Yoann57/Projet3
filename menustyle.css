@@ -39,18 +39,35 @@ header i {
   background-image: url(images/menu1.jpg);
 }
 
-.menu1 {
+.menu2 {
+  background-image: url(images/menu2.jpg);
+}
+
+.menu3 {
+  background-image: url(images/menu3.jpg);
+}
+
+.menu4 {
+  background-image: url(images/menu4.jpg);
+}
+
+.menu1, .menu2, .menu3, .menu4 {
   height: 300px;
   width: 100%;
   background-size: cover;
   background-position: center;
-  max-width: 500px;
+  max-width: 1200px;
 }
 
 .titre {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: "shrikhand";
+  margin-left: -10px;
 }
 
 #menutxt {
@@ -58,17 +75,18 @@ header i {
   background-color: #f3f3f3;
   border-radius: 47px 47px 0 0;
   margin-top: -48px;
-  max-width: 500px;
+  max-width: 960px;
+  font-family: "roboto";
 }
 
 .titre p {
   margin-left: 25px;
   font-family: "shrikhand";
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .fa-heart {
-  margin: 36px 0 0 20px;
+  margin: 25px 18px 0 20px;
 }
 
 .fa-heart::before {
@@ -104,7 +122,7 @@ header i {
   margin-right: 10px;
 }
 
-#txtentre {
+#txtentre, #titresepare {
   animation: fadein 3s;
   -moz-animation: fadein 3s;
   -webkit-animation: fadein 3s;
@@ -143,6 +161,9 @@ header i {
 .txt p {
   margin: 0;
   padding: 5px 15px 5px 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .anim {
@@ -152,7 +173,8 @@ header i {
   padding-top: 20px;
   margin-top: -30px;
   margin-bottom: -1px;
-  margin-right: -1px;
+  margin-right: -31px;
+  margin-left: 10px;
   padding-left: 30px;
   background-color: #99e2d0;
 }
@@ -163,6 +185,7 @@ header i {
           animation-name: anim;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
+  cursor: pointer;
 }
 
 @-webkit-keyframes anim {
@@ -184,7 +207,6 @@ header i {
 }
 
 .txt:hover .animi {
-  display: block;
   -webkit-animation-name: animi;
           animation-name: animi;
   -webkit-animation-duration: 1s;
@@ -192,16 +214,38 @@ header i {
 }
 
 @-webkit-keyframes animi {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 0;
+    display: none;
+  }
+  90% {
+    opacity: 1;
+    display: active;
+  }
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+    display: active;
   }
 }
 
 @keyframes animi {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 0;
+    display: none;
+  }
+  90% {
+    opacity: 1;
+    display: active;
+  }
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+    display: active;
   }
 }
 
@@ -224,6 +268,7 @@ header i {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-right: 30px;
 }
 
 .btnresto {
@@ -240,6 +285,7 @@ header i {
 
 .btnresto p {
   color: white;
+  font-family: "roboto";
 }
 
 .logof {
@@ -273,6 +319,7 @@ footer {
   background-color: #f2f2f2;
   font-size: 15px;
   background-color: #313131;
+  font-family: "roboto";
 }
 
 footer i {
@@ -280,8 +327,8 @@ footer i {
   padding-right: 15px;
 }
 
-@media screen and (min-width: 499px) {
-  header,
+@media screen and (min-width: 767px) {
+  #logo,
   .menu1,
   #menutxt,
   .btnresto {
@@ -290,6 +337,10 @@ footer i {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  #menutxt {
+    padding-left: 120px;
+    padding-right: 120px;
   }
 }
 /*# sourceMappingURL=menustyle.css.map */
