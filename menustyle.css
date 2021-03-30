@@ -372,5 +372,12 @@ footer i {
     padding-left: 120px;
     padding-right: 120px;
   }
+   footer ul {
+    display: flex;
+    flex-direction: row;
+  }
+  footer a {
+    margin-right: 70px;
+  }
 }
 /*# sourceMappingURL=menustyle.css.map */
