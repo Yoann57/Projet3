@@ -51,7 +51,10 @@ header i {
   background-image: url(images/menu4.jpg);
 }
 
-.menu1, .menu2, .menu3, .menu4 {
+.menu1,
+.menu2,
+.menu3,
+.menu4 {
   height: 300px;
   width: 100%;
   background-size: cover;
@@ -90,10 +93,9 @@ header i {
 }
 
 .fa-heart::before {
-  content: "\f004";
   -webkit-transition: color 1s ease-out;
   transition: color 1s ease-out;
-  color: #552292;
+  color: #b98deb;
 }
 
 .fa-heart:hover::before {
@@ -102,27 +104,158 @@ header i {
   cursor: pointer;
 }
 
-#titresepare {
+.titresepare {
   margin-left: 20px;
   border-bottom: 3px solid #99e2d0;
   width: 40px;
   margin-bottom: 10px;
 }
 
-#titresepare p {
+.titresepare p {
   margin-bottom: 5px;
 }
 
-.txt {
+.carte {
   border: 1px solid transparent;
   background-color: white;
   border-radius: 17px;
   margin-bottom: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-left: 10px;
   margin-right: 10px;
 }
 
-#txtentre, #titresepare {
+.carte strong {
+  padding: 0 15px 10px 0;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.carte-texte {
+  min-width: 0;
+  padding: 10px 0 10px 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.carte-anim {
+  display: none;
+  cursor: pointer;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 0 17px 17px 0;
+  border: 1px solid transparent;
+  background-color: #99e2d0;
+  width: 40%;
+  margin: -1px;
+}
+
+.carte-anim-i {
+  border-radius: 55%;
+  border: 1px solid transparent;
+  color: #99e2d0;
+  padding: 2px 0 0 3px;
+  height: 20px;
+  width: 20px;
+  background-color: white;
+}
+
+.carte:hover .carte-anim {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation-name: carte-anim;
+          animation-name: carte-anim;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.carte:hover .carte-anim-i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation-name: carte-anim-i;
+          animation-name: carte-anim-i;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+@-webkit-keyframes carte-anim {
+  0% {
+    width: 0px;
+    display: -webkit-box;
+    display: flex;
+  }
+  100% {
+    width: 40%;
+    display: -webkit-box;
+    display: flex;
+  }
+}
+
+@keyframes carte-anim {
+  0% {
+    width: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  100% {
+    width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@-webkit-keyframes carte-anim-i {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 0;
+    display: none;
+  }
+  90% {
+    opacity: 1;
+    display: active;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    display: active;
+  }
+}
+
+@keyframes carte-anim-i {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 0;
+    display: none;
+  }
+  90% {
+    opacity: 1;
+    display: active;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    display: active;
+  }
+}
+
+#txtentre,
+.titresepare {
   animation: fadein 3s;
   -moz-animation: fadein 3s;
   -webkit-animation: fadein 3s;
@@ -158,119 +291,6 @@ header i {
   }
 }
 
-.txt p {
-  margin: 0;
-  padding: 5px 15px 5px 15px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.anim {
-  display: none;
-  border: 1px solid transparent;
-  border-radius: 0 17px 17px 0;
-  padding-top: 20px;
-  margin-top: -30px;
-  margin-bottom: -1px;
-  margin-right: -31px;
-  margin-left: 10px;
-  padding-left: 30px;
-  background-color: #99e2d0;
-}
-
-.txt:hover .anim {
-  display: block;
-  -webkit-animation-name: anim;
-          animation-name: anim;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  cursor: pointer;
-}
-
-@-webkit-keyframes anim {
-  0% {
-    width: 0px;
-  }
-  100% {
-    width: 55px;
-  }
-}
-
-@keyframes anim {
-  0% {
-    width: 0px;
-  }
-  100% {
-    width: 55px;
-  }
-}
-
-.txt:hover .animi {
-  -webkit-animation-name: animi;
-          animation-name: animi;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-}
-
-@-webkit-keyframes animi {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-    opacity: 0;
-    display: none;
-  }
-  90% {
-    opacity: 1;
-    display: active;
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-    display: active;
-  }
-}
-
-@keyframes animi {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-    opacity: 0;
-    display: none;
-  }
-  90% {
-    opacity: 1;
-    display: active;
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-    display: active;
-  }
-}
-
-.animi {
-  border: 1px solid transparent;
-  border-radius: 55%;
-  padding: 2px 0 0 3px;
-  color: #99e2d0;
-  margin-right: 30px;
-  height: 20px;
-  width: 20px;
-  margin-bottom: 20px;
-  background-color: white;
-}
-
-.txt2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-right: 30px;
-}
-
 .btnresto {
   border: 1px solid transparent;
   border-radius: 65px;
@@ -286,6 +306,13 @@ header i {
 .btnresto p {
   color: white;
   font-family: "roboto";
+}
+
+.btnresto:hover {
+  -webkit-box-shadow: 1px 1px 7px #9356dc;
+          box-shadow: 1px 1px 7px #9356dc;
+  background: linear-gradient(170deg, #f79fde 30%, #b186e6 70%);
+  cursor: pointer;
 }
 
 .logof {
@@ -329,7 +356,10 @@ footer i {
 
 @media screen and (min-width: 767px) {
   #logo,
-  .menu1, .menu2, .menu3, .menu4,
+  .menu1,
+  .menu2,
+  .menu3,
+  .menu4,
   #menutxt,
   .btnresto {
     margin-left: auto;

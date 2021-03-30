@@ -31,7 +31,10 @@ header i {
 .menu4 {
   background-image: url(images/menu4.jpg);
 }
-.menu1,.menu2,.menu3,.menu4 {
+.menu1,
+.menu2,
+.menu3,
+.menu4 {
   height: 300px;
   width: 100%;
   background-size: cover;
@@ -63,161 +66,148 @@ header i {
   margin: 25px 18px 0 20px;
 }
 .fa-heart::before {
-  content: "\f004";
   transition: color 1s ease-out;
-  color: #552292;
+  color: #b98deb;
 }
 .fa-heart:hover::before {
   color: $primaire;
   font-weight: bold;
   cursor: pointer;
 }
-#titresepare {
+.titresepare {
   margin-left: 20px;
   border-bottom: 3px solid $tertiaire;
   width: 40px;
   margin-bottom: 10px;
 }
-#titresepare p {
+.titresepare p {
   margin-bottom: 5px;
 }
-.txt {
+.carte {
   border: 1px solid transparent;
   background-color: white;
   border-radius: 17px;
   margin-bottom: 12px;
+  display:flex;
+  justify-content: space-between;
   margin-left: 10px;
-  margin-right: 10px; 
- 
+  margin-right: 10px;
 }
-#txtentre,#titresepare{
+.carte strong{
+  padding: 0 15px 10px 0;
+  align-self: flex-end;
+}
+
+.carte-texte {
+  min-width: 0;
+  padding:10px 0 10px 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.carte-anim {
+  display: none;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 17px 17px 0;
+  border: 1px solid transparent;
+  background-color: #99e2d0;
+  width: 40%;
+  margin:-1px;
+}
+
+.carte-anim-i {
+  border-radius: 55%;
+  border: 1px solid transparent;
+  color: #99e2d0;
+  padding: 2px 0 0 3px;
+  height: 20px;
+  width: 20px;
+  background-color: white;
+}
+
+.carte:hover .carte-anim {
+  display: flex;
+  animation-name: carte-anim;
+  animation-duration: 1s;
+}
+
+.carte:hover .carte-anim-i {
+  display: flex;
+  animation-name: carte-anim-i;
+  animation-duration: 1s;
+}
+
+@keyframes carte-anim {
+  0% {
+    width: 0px;
+    display: flex;
+  }
+  100% {
+    width: 40%;
+    display: flex;
+  }
+}
+
+@keyframes carte-anim-i {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0;
+    display: none;
+  }
+  90% {
+    opacity: 1;
+    display: active;
+  }
+  100% {
+    transform: rotate(360deg);
+    display: active;
+  }
+}
+#txtentre,
+.titresepare {
   animation: fadein 3s;
   -moz-animation: fadein 3s;
   -webkit-animation: fadein 3s;
- 
-  
 }
-#txtplat{
- 
+#txtplat {
   animation: fadein 5s;
   -moz-animation: fadein 5s;
   -webkit-animation: fadein 5s;
-  
 }
-#txtdessert{
-  
+#txtdessert {
   animation: fadein 7s;
   -moz-animation: fadein 7s;
   -webkit-animation: fadein 7s;
 }
 @keyframes fadein {
   from {
-    opacity:0;
+    opacity: 0;
   }
-  to{
-    opacity:1;
+  to {
+    opacity: 1;
   }
 }
-@-moz-keyframes fadein{
+@-moz-keyframes fadein {
   from {
-    opacity:0;
+    opacity: 0;
   }
-  to{
-    opacity:1;
+  to {
+    opacity: 1;
   }
 }
-@-webkit-keyframes fadein{
+@-webkit-keyframes fadein {
   from {
-    opacity:0;
+    opacity: 0;
   }
-  to{
-    opacity:1;
-  }
-}
-.txt p {
-  margin: 0;
-  padding: 5px 15px 5px 15px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
- 
-}
-
-
-.anim {
-  display: none;
-  border: 1px solid transparent;
-  border-radius: 0 17px 17px 0;
-  padding-top: 20px;
-  margin-top: -30px;
-  margin-bottom: -1px;
-  margin-right: -31px;
-  margin-left: 10px;
-  padding-left: 30px;
-  background-color: $tertiaire;
-  
-}
-
-.txt:hover .anim {
-  display: block;
-  animation-name: anim;
-  animation-duration: 1s;
-  cursor:pointer;
-  
-}
-
-@keyframes anim {
-  0% {
-    width: 0px;
-  }
-  100% {
-    width: 55px;
+  to {
+    opacity: 1;
   }
 }
-.txt:hover .animi {
- 
-  animation-name: animi;
-  animation-duration: 1s;
- 
 
-}
-@keyframes animi {
- 0%{
-   transform:rotate(0deg);
-   opacity:0;
-   display:none;
-  
- }
- 90%{
-   opacity:1;
-   display:active;
- 
- }
-  100% {
-    transform: rotate(360deg);
-    display: active;
-  
-    
-  }
-}
-.animi {
-  border: 1px solid transparent;
-  border-radius: 55%;
-  padding: 2px 0 0 3px;
-  color: $tertiaire;
-  margin-right: 30px;
-  height: 20px;
-  width: 20px;
-  margin-bottom: 20px;
-  background-color: white;
-}
-
-.txt2 {
-  display:flex;
-  justify-content: space-between;
-  margin-right: 30px;
-  
-}
 .btnresto {
   border: 1px solid transparent;
   border-radius: 65px;
@@ -232,6 +222,11 @@ header i {
 .btnresto p {
   color: white;
   font-family: "roboto";
+}
+.btnresto:hover{
+  box-shadow: 1px 1px 7px $primaire;
+  background:linear-gradient(170deg, #f79fde 30%, #b186e6 70%);
+  cursor: pointer;
 }
 .logof {
   height: 17px;
@@ -272,15 +267,18 @@ footer i {
 }
 
 @media screen and (min-width: 767px) {
- #logo,
-  .menu1,.menu2,.menu3,.menu4,
+  #logo,
+  .menu1,
+  .menu2,
+  .menu3,
+  .menu4,
   #menutxt,
   .btnresto {
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
   }
-  #menutxt{
+  #menutxt {
     padding-left: 120px;
     padding-right: 120px;
   }
