@@ -178,6 +178,12 @@ h1 {
   background-color: #f3f3f3;
 }
 
+.btnmid:hover {
+  -webkit-box-shadow: 1px 1px 7px;
+          box-shadow: 1px 1px 7px;
+  background-color: #fafafa;
+}
+
 #middle i {
   width: 45px;
   margin: 10px;
