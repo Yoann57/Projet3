@@ -241,16 +241,13 @@ header i {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
     opacity: 0;
-    display: none;
   }
   90% {
     opacity: 1;
-    display: active;
   }
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
-    display: active;
   }
 }
 
