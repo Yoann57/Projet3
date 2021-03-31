@@ -156,15 +156,12 @@ header i {
   0% {
     transform: rotate(0deg);
     opacity: 0;
-    display: none;
   }
   90% {
     opacity: 1;
-    display: active;
   }
   100% {
     transform: rotate(360deg);
-    display: active;
   }
 }
 #txtentre,
