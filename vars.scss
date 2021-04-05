@@ -1,16 +1,28 @@
 @font-face {
-    font-family: "roboto";
-    src: url("polices/Roboto-Regular.ttf");
-  }
-  
-  @font-face {
-    font-family: "shrikhand";
-    src: url("polices/Shrikhand-Regular.ttf");
-  }
-  @font-face {
-    font-family: "roboto-bold";
-    src: url("polices/Roboto-Bold.ttf");
-  }
-  $primaire: #9356dc;
-  $secondaire: #ff79da;
-  $tertiaire: #99e2d0;
+  font-family: "roboto";
+  src: url("polices/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: "shrikhand";
+  src: url("polices/Shrikhand-Regular.ttf");
+}
+@font-face {
+  font-family: "roboto-bold";
+  src: url("polices/Roboto-Bold.ttf");
+}
+$primaire: #9356dc;
+$secondaire: #ff79da;
+$tertiaire: #99e2d0;
+$primairehover: #b186e6;
+$secondairehover: #f79fde;
+$blanc: #ffffff;
+$noir:#000000;
+$grisclair: #f3f3f3;
+$grisfonce: #e7e7e7;
+$grisfont: #808080;
+$shadow: #d6d5d5;
+$heartbefore: #b98deb;
+$fixedp: #008000;
+$carteanim: #99e2d0;
+$footer: #313131;

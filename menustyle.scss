@@ -10,7 +10,7 @@ header {
 }
 header i {
   margin: 20px 50px 0 20px;
-  color: black;
+  color: $noir;
 }
 
 #logo img {
@@ -50,7 +50,7 @@ header i {
 
 #menutxt {
   border: 1px solid transparent;
-  background-color: rgb(243, 243, 243);
+  background-color: $grisclair;
   border-radius: 47px 47px 0 0;
   margin-top: -48px;
   max-width: 960px;
@@ -67,7 +67,7 @@ header i {
 }
 .fa-heart::before {
   transition: color 1s ease-out;
-  color: #b98deb;
+  color: $heartbefore;
 }
 .fa-heart:hover::before {
   color: $primaire;
@@ -85,27 +85,26 @@ header i {
 }
 .carte {
   border: 1px solid transparent;
-  background-color: white;
+  background-color: $blanc;
   border-radius: 17px;
   margin-bottom: 12px;
-  display:flex;
+  display: flex;
   justify-content: space-between;
   margin-left: 10px;
   margin-right: 10px;
 }
-.carte strong{
+.carte strong {
   padding: 0 15px 10px 0;
   align-self: flex-end;
 }
 
 .carte-texte {
   min-width: 0;
-  padding:10px 0 10px 15px;
+  padding: 10px 0 10px 15px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-
 
 .carte-anim {
   display: none;
@@ -114,19 +113,19 @@ header i {
   justify-content: center;
   border-radius: 0 17px 17px 0;
   border: 1px solid transparent;
-  background-color: #99e2d0;
+  background-color: $carteanim;
   width: 40%;
-  margin:-1px;
+  margin: -1px;
 }
 
 .carte-anim-i {
   border-radius: 55%;
   border: 1px solid transparent;
-  color: #99e2d0;
+  color: $carteanim;
   padding: 2px 0 0 3px;
   height: 20px;
   width: 20px;
-  background-color: white;
+  background-color: $blanc;
 }
 
 .carte:hover .carte-anim {
@@ -217,12 +216,12 @@ header i {
   max-width: 300px;
 }
 .btnresto p {
-  color: white;
+  color: $blanc;
   font-family: "roboto";
 }
-.btnresto:hover{
+.btnresto:hover {
   box-shadow: 1px 1px 7px $primaire;
-  background:linear-gradient(170deg, #f79fde 30%, #b186e6 70%);
+  background: linear-gradient(170deg, $secondairehover 30%, $primairehover 70%);
   cursor: pointer;
 }
 .logof {
@@ -230,7 +229,7 @@ header i {
   margin-left: 30px;
   margin-bottom: 10px;
   padding: 10px;
-  color: white;
+  color: $blanc;
   font-family: shrikhand;
 }
 footer ul {
@@ -240,7 +239,7 @@ footer ul {
 
 footer a {
   text-decoration: none;
-  color: white;
+  color: $blanc;
   padding-bottom: 5px;
 }
 
@@ -252,9 +251,8 @@ footer {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  background-color: #f2f2f2;
   font-size: 15px;
-  background-color: #313131;
+  background-color: $footer;
   font-family: "roboto";
 }
 
@@ -278,6 +276,13 @@ footer i {
   #menutxt {
     padding-left: 120px;
     padding-right: 120px;
+  }
+  footer ul {
+    display: flex;
+    flex-direction: row;
+  }
+  footer a {
+    margin-right: 70px;
   }
 }
 

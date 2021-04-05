@@ -2,71 +2,64 @@
 
 .lds-dual-ring {
   width: 100%;
-  height:100%;
-  position:fixed;
+  height: 100%;
+  position: fixed;
   animation: fadout 3s;
-  opacity:0;
+  opacity: 0;
   z-index: -1;
 }
-.lds-dual-ring::before{
+.lds-dual-ring::before {
   content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background: $tertiaire;
-    opacity: 0.8;  
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: $tertiaire;
+  opacity: 0.8;
 }
-.lds-dual-ring::after{
+.lds-dual-ring::after {
   box-sizing: border-box;
-  
+
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
   margin: -25px 0 0 -25px;
-  border: 4px solid #f3f3f3;
+  border: 4px solid $grisclair;
   border-top: 4px solid $primaire;
   border-bottom: 4px solid $secondaire;
-  border-left:4px solid $tertiaire;
-  border-right:4px solid $tertiaire;
+  border-left: 4px solid $tertiaire;
+  border-right: 4px solid $tertiaire;
   border-radius: 50%;
   width: 100px;
   height: 100px;
   animation: spin 1s linear infinite;
-  
-  
-  
 }
-@keyframes fadout{
-from{
-  opacity:0.8;
-  z-index: 1;
+@keyframes fadout {
+  from {
+    opacity: 0.8;
+    z-index: 1;
+  }
+  to {
+    opacity: 0;
+    z-index: -1;
+  }
 }
-to{
-  opacity:0;
-  z-index: -1;
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
-}
-@keyframes spin{
-    0% {
-        transform: rotate(0deg);
-        
-    }
-    100%{
-        transform: rotate(360deg);
-        
-    }
-    
-}
-@-webkit-keyframes spin{
-    0% {
-       -webkit-transform: rotate(0deg);
-    }
-    100%{
-        -webkit-transform: rotate(360deg);
-        
-    }
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
 }
 
 body {
@@ -74,7 +67,6 @@ body {
 }
 header {
   text-align: center;
-  
 }
 h1 {
   margin-left: 15px;
@@ -89,37 +81,35 @@ h1 {
   display: flex;
   border: 1px solid transparent;
   display: flex;
-  background-color: rgb(231, 231, 231);
+  background-color: $grisfonce;
   justify-content: center;
   margin: auto;
   margin-left: -35px;
-  
 }
 .searchbar i {
   height: 15px;
   width: 15px;
   padding: 17px 17px 0 0;
-  
 }
 #title {
   border: 1px solid transparent;
-  background-color: rgb(243, 243, 243);
+  background-color: $grisclair;
   padding-bottom: 45px;
 }
 .btnresto {
   border: 1px solid transparent;
   border-radius: 65px;
-  margin:auto;
+  margin: auto;
   background: linear-gradient(170deg, $secondaire 30%, $primaire 70%);
   max-width: 300px;
 }
 .btnresto p {
-  color: white;
+  color: $blanc;
 }
 
-.btnresto:hover{
+.btnresto:hover {
   box-shadow: 1px 1px 7px $primaire;
-  background:linear-gradient(170deg, #f79fde 30%, #b186e6 70%);
+  background: linear-gradient(170deg, $secondairehover 30%, $primairehover 70%);
   cursor: pointer;
 }
 #middle {
@@ -128,22 +118,19 @@ h1 {
 .btnmid {
   display: flex;
   border: 1px solid transparent;
-  box-shadow: 1px 1px 5px rgb(163, 161, 161);
+  box-shadow: 1px 1px 5px $shadow;
   width: 275px;
   border-radius: 22px;
   margin-left: 20px;
   margin-bottom: 25px;
   padding: 15px 15px 15px 0;
-  background-color: rgb(243, 243, 243);
+  background-color: $grisclair;
 }
-.btnmid:hover{
-  box-shadow: 1px 1px 7px;
-  background-color: rgb(250,250,250);
-}
+
 #middle i {
   width: 45px;
   margin: 10px;
-  color: gray;
+  color: $grisfont;
 }
 .num {
   height: 30px;
@@ -156,7 +143,7 @@ h1 {
 .num p {
   margin-left: 11px;
   margin-top: 6px;
-  color: white;
+  color: $blanc;
 }
 .carte {
   font-family: "roboto";
@@ -165,16 +152,20 @@ h1 {
   height: auto;
   margin: 30px;
   max-width: 400px;
-  box-shadow: 1px 1px 5px rgb(214, 213, 213);
+  box-shadow: 1px 1px 5px $shadow;
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
+}
+.carte:hover {
+  box-shadow: 3px 3px 5px $shadow;
+  cursor: pointer;
 }
 .menucartes a {
   text-decoration: none;
 }
 .menucartes p {
-  color: black;
+  color: $noir;
 }
 
 .menu1,
@@ -189,7 +180,7 @@ h1 {
 }
 #restaurants {
   border: 1px solid transparent;
-  background-color: rgb(243, 243, 243);
+  background-color: $grisclair;
 }
 .carte p {
   padding: 0 0 0 10px;
@@ -203,7 +194,7 @@ h1 {
 }
 .fa-heart::before {
   transition: color 1s ease-out;
-  color: #552292;
+  color: $heartbefore;
 }
 .fa-heart:hover::before {
   color: $primaire;
@@ -217,7 +208,7 @@ h1 {
   height: 23px;
   width: 67px;
   border: 1px solid transparent;
-  color: green;
+  color: $fixedp;
   background-color: $tertiaire;
   margin: 0 0 0 210px;
   padding-top: 5px;
@@ -239,7 +230,7 @@ h1 {
   margin-left: 30px;
   margin-bottom: 10px;
   padding: 10px;
-  color: white;
+  color: $blanc;
   font-family: shrikhand;
 }
 footer ul {
@@ -249,23 +240,21 @@ footer ul {
 
 footer a {
   text-decoration: none;
-  color: white;
+  color: $blanc;
   padding-bottom: 5px;
 }
 
 footer {
   display: flex;
   flex-direction: column;
-  background-color: #f2f2f2;
   font-size: 15px;
-  background-color: rgb(49, 49, 49);
+  background-color: $footer;
 }
 footer i {
   width: 10px;
   padding-right: 15px;
 }
 @media screen and (min-width: 767px) {
-  
   #middle {
     display: flex;
   }
@@ -282,23 +271,22 @@ footer i {
     margin-right: 70px;
   }
 }
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
   .btnmid {
     display: flex;
     flex-direction: column;
-    margin:auto;
+    margin: auto;
     margin-bottom: 20px;
-    
   }
-  .btnmid p{
+  .btnmid p {
     text-align: center;
     padding-right: 10px;
   }
- 
+
   #middle i {
     width: 45px;
     margin: 15px 0 0 120px;
-    color: gray;
+    color: $grisfont;
   }
   .num {
     height: 30px;
@@ -306,6 +294,6 @@ footer i {
     border: 1px solid transparent;
     border-radius: 55%;
     background-color: $primaire;
-    margin: -30px 0 0 120px ;
+    margin: -30px 0 0 120px;
   }
 }
