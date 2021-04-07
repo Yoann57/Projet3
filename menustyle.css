@@ -15,6 +15,7 @@
 
 body {
   margin: 0;
+  font-family: "roboto";
 }
 
 header {
@@ -299,7 +300,6 @@ header i {
 
 .btnresto p {
   color: #ffffff;
-  font-family: "roboto";
 }
 
 .btnresto:hover {

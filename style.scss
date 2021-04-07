@@ -64,14 +64,15 @@
 
 body {
   margin: 0;
+  font-family: "roboto";
 }
 header {
   text-align: center;
 }
-h1 {
+h1,h2 {
   margin-left: 15px;
-  font-family: "shrikhand";
 }
+
 #logo img {
   height: 30px;
   margin-bottom: 10px;
